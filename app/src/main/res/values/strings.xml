@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Irrigation</string>
+    <string name="sign_in">Sign in</string>
+    <string name="valve_1">VALVE 1</string>
+</resources>
