@@ -99,4 +99,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.049" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/received_values"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Status"
+            android:gravity="center|left"
+            android:layout_alignParentBottom="true"/>
+
+        <EditText
+            android:id="@+id/send_values"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center|left"
+            android:layout_above="@+id/received_values" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/send_values"
+            android:text="Send"
+            android:enabled="false">
+
+        </Button>
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
