@@ -32,6 +32,8 @@ public class second extends AppCompatActivity {
     String clientId = "myClientId"; // Choose a unique client ID
     String pubTopic = "MY_TOPIC1";
     String subsTopic = "MY_TOPIC2";
+    String mqttUser = "ahmed";
+    String mqttPassword = "12345";
 
     boolean connected;
     TextView receivedValues;
@@ -109,6 +111,8 @@ public class second extends AppCompatActivity {
                     MqttConnectOptions options = new MqttConnectOptions();
                     options.setCleanSession(true);
                     options.setConnectionTimeout(10);
+                    options.setUserName(mqttUser);
+                    options.setPassword(mqttPassword.toCharArray());
                     mqttClient.connect(options);
                     mqttClient.subscribe(subsTopic);
                     connected = true;
